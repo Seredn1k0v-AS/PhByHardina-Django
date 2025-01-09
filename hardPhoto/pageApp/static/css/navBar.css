@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arsenal&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+
+#menu ul {
+    margin: 0%;
+}
+
+#opener {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    margin-top: 20px;
+}
+
+#opener h1{
+
+    margin: 0;
+    font-size: 2em;
+    letter-spacing: 3px;
+}
+
+#menu {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    width: 100%;
+}
+
+#menu ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0%;
+    width: 90%;
+
+}
+
+#menu ul li {
+    list-style-type: none;
+    margin: 10px;
+}
+
+#menu li a{
+    color: #000;
+    text-decoration: none;
+    position: relative;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 1.1em;
+    line-height: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Разделители ссылок */
+
+#menu li a::after{
+    content: '|';
+    padding-left: 20px;
+    font-family: 'Arsenal', sans-serif;
+    opacity: 0.6;
+    font-size: 0.75em;
+}
+
+#menu li:last-child a::after {
+    content: none;
+}
+
+
+/* Красивое подчеркивание ссылок */
+#menu a::before {
+    content: '';
+    bottom: -5px;
+    left: 0;
+    position: absolute;
+    height: 1px;
+    background-color: #000;
+    transition: 0.3s;
+    transform: scaleX(0);
+}
+
+#menu a:hover:before {
+    transform: scaleX(1);
+}
+
+/* Так как из-за разной длины ссылок почеркивание работает некорректно, то задаем каждой ссылке
+ индивидуальную длину подчеркивания через id */
+        #glavnaya::before {
+            width: 75%;
+        }
+        #portfolio::before {
+            width: 80%;
+        }
+        #portrait::before {
+            width: 75%;
+        }
+        #family::before {
+            width: 60%;
+        }
+        #loveStory::before {
+            width: 100%;
+        }
+        #info::before {
+            width: 65%;
+        }
+        #recommend::before {
+            width: 95%;
+        }
+        #prepare::before {
+            width: 95%;
+        }
+        #price::before {
+            width: 70%;
+        }
+        #callBack::before {
+            width: 75%;
+        }
+        #contacts::before {
+            width: 100%;
+        }
+
+/* 1е меню */
+#dropDown {
+    position: relative;
+}
+
+#dropDownContent {
+    position: absolute;
+    top: 30px;
+    left: -15px;
+    border: solid 1px white;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    padding: 5px 15px;
+    margin-top: 20px;
+    opacity: 0;
+    background-color: white;
+}
+/* Убираем ненужные разделители ссылок */
+#dropDownContent a::after {
+    display: none;
+}
+
+/* Задаем отступы внутри всплывающего меню */
+#dropDownContent a {
+    margin: 12px 0;
+}
+
+/* 2е меню */
+#dropDown_2 {
+    position: relative;
+}
+
+#dropDownContent_2 {
+    position: absolute;
+    top: 30px;
+    left: -15px;
+    border: solid 1px white;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 999;
+    padding: 5px 15px;
+    width: 220px;
+    margin-top: 20px;
+    opacity: 0;
+    background-color: white;
+}
+/* Убираем ненужные разделители ссылок */
+#dropDownContent_2 a::after {
+    display: none;
+}
+
+/* Задаем отступы внутри всплывающего меню */
+#dropDownContent_2 a {
+    margin: 12px 0;
+}
+
+/* Спрячем пока ссылки из выпадающего меню */
+#dropDownContent,#dropDownContent_2{
+    visibility: hidden;
+}
+
+
+#dropDownContent:hover,#dropDownContent_2:hover {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0;
+}
+
+/* Медиа запрос для мобайла */
+@media screen and (max-width: 1024px){
+    #menu li a {
+        font-size: 2em;
+    }
+}
+/* Медиа запрос для мобайла (END) */

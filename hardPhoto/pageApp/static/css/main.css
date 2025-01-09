@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arsenal&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+
+/* Шапка сайта */
+
+
+
+main {
+    margin-top: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #000;
+    opacity: 0.7;
+    letter-spacing: 2px;
+    margin: 10px;
+}
+
+h3 a {
+    text-decoration: none;
+    color: #000;
+    transition: 500ms;
+}
+
+h3 a:hover {
+    color: #000;
+    letter-spacing: .05em;
+    transition: 500ms;
+}
+
+
+/* Настройка плагина OWL-Carousel */
+
+#slides {
+    position: absolute;
+    left: 0;
+    display: flex;
+    overflow: scroll;
+}
+
+#slides img{
+    display: block;
+    float: left;
+    overflow: hidden;
+    height: 400px;
+    margin: 20px;
+}
+
+.currentSlide {
+    left: 35%;
+
+}
+
+.owl-carousel {
+    padding-top: 40px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* Настройка плагина OWL-Carousel (END)*/
+
+/* Стили знакомства с фотографом */
+
+#aboutMeContainer {
+    text-align: center;
+    margin: 220px 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#aboutMe {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    width: 90%;
+    font-family: 'Cormorant Garamond', serif;
+    padding: 0 2.5%;
+}
+
+#aboutMeContainer img {
+    width: 25%;
+    padding: 0 2.5%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+#aboutMeText {
+    font-size: 1.3rem;;
+}
+/* Стили знакомства с фотографом (END) */
+
+/* Преднастройка всплывающего контента */
+.fadeElem {
+    padding-top: 40px;
+}
+/* Преднастройка всплывающего контента (END)*/
+
+
+/* Стили кнопок-ссылок */
+
+.aButton {
+    border: solid #000;
+    background-color: #000;
+    border-radius: 100px;
+    height: 54px;
+    width: 550px;
+    margin: 50px 0;
+    opacity: 1;
+    transition: 500ms;
+}
+
+.aButton a, .aButton a:hover {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.aButton:hover {
+    opacity: 0.85;
+    transition: 500ms;
+}
+
+a i{
+    padding: 0 8px;
+}
+
+.labelContainer {
+    margin: 30px 0;
+}
+
+.label::after{
+    content: "•    •    •";
+}
+/* Стили кнопок-ссылок (END)*/
+
+
+/* Стили блоков контента с фотографиями */
+.photoContainer {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photoBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    z-index: 1;
+}
+
+.photoBlock img{
+    justify-content: center;
+    width: 22%;
+    padding: 10px;
+    z-index: 1001;
+}
+/* Стили блоков контента с фотографиями (END) */
+
+
+/* Стили блока с инстаграм - фото */
+#instaBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#instaPhoto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+
+}
+
+#instaPhoto a{
+    width: 28%;
+    margin: 6px;
+}
+
+#instaPhoto img {
+    width: 100%;
+
+}
+
+#instaText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    color: #000;
+    opacity: 0.7;
+}
+ /* Стили блока с инстаграм - фото (END)*/
+
+
+/* Стили нижнего колонтитула */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.footerLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerLinks img {
+    width: 35px;
+    height: 35px;
+    margin: 10px;
+    opacity: 0.95;
+    transition: 500ms;
+}
+
+.footerLinks img:hover{
+    opacity: 1;
+    transform: scale(1.25, 1.25) ;
+    transition: 500ms;
+}
+
+#pixelPerfect {
+    display: none;
+}
+
+#footerText {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1em;
+
+}
+
+#footerText p {
+    margin: 2px;
+}
+
+/* Стили нижнего колонтитула  (END)*/
+
+/* Медиа запрос для мобайла */
+@media screen and (max-width: 1024px){
+
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    #opener {
+        font-size: 1.25rem;
+    }
+
+    #aboutMeContainer {
+        text-align: center;
+        margin: 220px  auto 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #aboutMeText, h2 {
+        font-size: 160%;
+    }
+
+    #aboutMe {
+        flex-direction: column;
+    }
+
+    #aboutMeContainer img {
+        width: 65%;
+    }
+
+    .h2, h2, h3 a {
+        font-size: 3rem;
+    }
+
+    .photoBlock {
+        flex-direction: column;
+    }
+
+    .photoBlock img {
+        width: 75%;
+    }
+
+    .aButton {
+        height: 80px;
+    }
+
+    .aButton a, .aButton a:hover {
+        font-size: 22px;
+    }
+
+    #instaBlock {
+            flex-direction: column-reverse;
+    }
+
+    #instaPhoto {
+        flex-direction: column;
+        width: 195%;
+    }
+
+    #instaText {
+        font-size: 2.25rem;
+    }
+
+    #footerText {
+        font-size: 1.25em;
+    }
+}
+/* Медиа запрос для мобайла (END) */

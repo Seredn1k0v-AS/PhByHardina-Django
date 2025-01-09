@@ -1,0 +1,125 @@
+.opener {
+     font-family: 'Pattaya', Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 2px;
+}
+
+.menu {
+    padding: 0 5%;
+    margin: 0 5%;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 1.15em;
+    text-align: center;
+}
+
+ul {
+    height: 50px;
+    margin-top: 0;
+}
+
+.menu li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 4% 0 0;
+    margin: 2% 2%;
+    text-align: center;
+    border-right: solid #8a8a8a 1px;
+}
+
+.menu li:last-child {
+    border-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/*Первое всплывающее меню*/
+.dropdown, .dropdown2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+/*    Удлинняет разделительну линию справа :c   */
+}
+
+.fakelong {
+    display: inline-block;
+    padding-bottom: 5px ;
+}
+
+.menu li {
+    padding-bottom: 3px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 6em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 12px;
+    margin-top: 6px;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 5px;
+}
+
+.dropdown-content a:hover {
+    text-decoration: underline;
+}
+
+/*Второе всплывающее меню*/
+
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 15em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+    margin-top: 6px;
+    padding: 12px;
+}
+
+.dropdown2:hover .dropdown-content2 {
+    display: block;
+}
+
+.dropdown-content2 a {
+    display: block;
+    padding: 5px;
+}
+
+.dropdown-content2 a:hover {
+    text-decoration: underline;
+}
+
+.dropa:after {
+    content: '          \21C2';
+    height:1.5em;
+}
+
+navbar {
+    overflow: visible;
+    height: 100px;
+    top: 0%;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background-color: white;
+}
