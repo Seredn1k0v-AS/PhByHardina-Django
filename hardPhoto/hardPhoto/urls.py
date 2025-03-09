@@ -18,10 +18,20 @@ from django.contrib import admin
 from django.urls import path
 
 from pageApp.views import *
+from feedback.views import *
+
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
+    path('', index, name = 'home'),
+    path('feedback/', feed, name='feedback'),
+    path('price/', price, name='price'),
 ]
+
+if settings.DEBUG:  # Только в режиме разработки
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

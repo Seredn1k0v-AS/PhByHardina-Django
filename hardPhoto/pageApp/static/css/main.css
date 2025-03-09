@@ -5,9 +5,13 @@
 /* Шапка сайта */
 
 
+body{
+    margin: 0;
+    padding-top: 20px;
+}
 
 main {
-    margin-top: 170px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,7 +51,7 @@ h3 a:hover {
     display: block;
     float: left;
     overflow: hidden;
-    height: 400px;
+    height: 300px;
     margin: 20px;
 }
 
@@ -56,10 +60,12 @@ h3 a:hover {
 
 }
 
+
 .owl-carousel {
     padding-top: 40px;
     visibility: hidden;
     opacity: 0;
+
 }
 
 /* Настройка плагина OWL-Carousel (END)*/
@@ -68,7 +74,7 @@ h3 a:hover {
 
 #aboutMeContainer {
     text-align: center;
-    margin: 220px 80px 20px;
+    margin: 100px 80px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -117,19 +123,27 @@ h3 a:hover {
     width: 550px;
     margin: 50px 0;
     opacity: 1;
-    transition: 500ms;
-}
-
-.aButton a, .aButton a:hover {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
+    font-size: 1.1em;
+    transition: 100ms ease-in-out;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+
+
+
 .aButton:hover {
-    opacity: 0.85;
-    transition: 500ms;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border-color: #000;
+}
+.aButton a{
+    color: white;
+    text-decoration: none;
+    transition: 100ms ease-in-out;
+
+}
+.aButton:hover a{
+    color: black;
 }
 
 a i{
@@ -271,9 +285,9 @@ footer {
         overflow-x: hidden;
     }
 
-    #opener {
+    /* #opener {
         font-size: 1.25rem;
-    }
+    } */
 
     #aboutMeContainer {
         text-align: center;
@@ -312,10 +326,7 @@ footer {
         height: 80px;
     }
 
-    .aButton a, .aButton a:hover {
-        font-size: 22px;
-    }
-
+    
     #instaBlock {
             flex-direction: column-reverse;
     }

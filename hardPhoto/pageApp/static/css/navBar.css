@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Arsenal&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
 
-#menu ul {
-    margin: 0%;
-}
+
+
+
 
 #opener {
     display: flex;
@@ -14,13 +14,12 @@
     width: 100%;
     height: 100px;
     top: 0;
-    margin-top: 20px;
 }
 
 #opener h1{
 
     margin: 0;
-    font-size: 2em;
+    /* font-size: 2em; */
     letter-spacing: 3px;
 }
 
@@ -30,8 +29,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    z-index: 999;
-    width: 100%;
+    z-index: 998;
+    width: 95vw;
+
 }
 
 #menu ul {
@@ -40,7 +40,7 @@
     align-items: center;
     justify-content: center;
     padding: 0%;
-    width: 90%;
+    width: max(90%);
 
 }
 
@@ -54,7 +54,7 @@
     text-decoration: none;
     position: relative;
     font-family: 'Arsenal', sans-serif;
-    font-size: 1.1em;
+    font-size: 1.15em;
     line-height: 1;
     display: flex;
     flex-direction: row;
@@ -68,11 +68,17 @@
     padding-left: 20px;
     font-family: 'Arsenal', sans-serif;
     opacity: 0.6;
-    font-size: 0.75em;
+    /* font-size: 0.75em; */
 }
 
 #menu li:last-child a::after {
     content: none;
+}
+
+#menu ul{
+    box-sizing: border-box;
+    width: max(95vw);
+    /* font-size: 1.25rem; */
 }
 
 
@@ -92,7 +98,7 @@
     transform: scaleX(1);
 }
 
-/* Так как из-за разной длины ссылок почеркивание работает некорректно, то задаем каждой ссылке
+/* Так как, из-за разной длины ссылок почеркивание работает некорректно, то задаем каждой ссылке
  индивидуальную длину подчеркивания через id */
         #glavnaya::before {
             width: 75%;
@@ -199,8 +205,14 @@
 
 /* Медиа запрос для мобайла */
 @media screen and (max-width: 1024px){
-    #menu li a {
-        font-size: 2em;
+    #menu li a{
+        font-size: 1.15em;
     }
+
+    #menu li a::after{
+        padding-left: 8.5px;
+    }    
 }
+
 /* Медиа запрос для мобайла (END) */
+

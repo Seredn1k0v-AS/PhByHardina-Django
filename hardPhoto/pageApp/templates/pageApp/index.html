@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>HardPhoto</title>
+        <title>{% block title %} HardPhoto {% endblock %}</title>
         <meta charset='utf-8'>
         <link rel='shortcut icon' href='../static/img/favicon.ico' type='image/x-icon'>
         {% load static %}
-        <link rel="stylesheet" href="../static/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="../static/css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="../static/css/owl.carousel.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel='stylesheet' href='../static/css/main.css'>
-        <link rel='stylesheet' href='../static/css/navBar.css'>
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+       <link rel='stylesheet' href='../static/css/navBar.css'>
+        <link rel='stylesheet' href='../static/css/feed.css'>
 
+        {% block underlining %}
         <style>
             #menu ul li:first-child a::before {
                 content: '';
@@ -24,10 +22,11 @@
                 transform: scaleX(1);
             }
         </style>
+        {% endblock %}
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body>
-        <navbar>
+        <navbar class="navBar">
             <div id="navBar">
                 <div id='opener'>
                     <h1>ANFISA HARDINA</h1><h1> PHOTO</h1>
@@ -36,7 +35,7 @@
                     <ul>
                         <li>
                             <div>
-                            <a id='glavnaya' href=''>ГЛАВНАЯ</a>
+                            <a id='glavnaya' href='{% url "home" %}'>ГЛАВНАЯ</a>
                             </div>
                         </li>
                         <li class="marked">
@@ -60,13 +59,13 @@
                             </li> -->
                         <li>
                             <div>
-                                <a id='price' href=''>ПРАЙС</a>
+                                <a id='price' href='{% url "price" %}'>ПРАЙС</a>
                             </div>
                         </li>
 
                         <li>
                             <div>
-                                <a id='callBack' href='callBack.html'>ОТЗЫВЫ</a>
+                                <a id='callBack' href='{% url "feedback" %}'>ОТЗЫВЫ</a>
                             </div>
                         </li>
 
@@ -79,20 +78,25 @@
                 </div>
             </div>
         </navbar>
+
+        {% block main_content %}
         <main>
 
-            <div class="owl-carousel" >
-                <div id="test" class="narrowPic"> <img src="../static/img/HardPh/DEkcJq0lt_o.jpg"> </div>
-                <div class="narrowPic"> <img src="../static/img/HardPh/3GA8v8QDId8.jpg"> </div>
-                <div class="narrowPic"> <img src="../static/img/HardPh/Wg85Diy9esI.jpg"> </div>
-                <div class="narrowPic"> <img src="../static/img/HardPh/ddMhlLtGJrI.jpg"> </div>
-                <div class="widePic" id="first">   <img src="../static/img/HardPh/Dr2BRqllcL4.jpg"> </div>
-                <div class="narrowPic"> <img src="../static/img/HardPh/pjqnTezIhLw.jpg"> </div>
-                <div class="narrowPic"> <img src="../static/img/HardPh/_KY8SjUbRnY.jpg"> </div>
-                <div class="widePic">   <img src="../static/img/HardPh/l5bcOqJFQwM.jpg"> </div>
-            </div>
+<!--                <div class="owl-carousel" >-->
+<!--                    <div id="test" class="narrowPic"> <img src="../static/img/HardPh/owl_carousel/2kZXRoc7j78.jpg"> </div>-->
+<!--                    <div class="narrowPic"> <img src="../static/img/HardPh/owl_carousel/3GA8v8QDId8.jpg"> </div>-->
+<!--                    <div class="narrowPic"> <img src="../static/img/HardPh/owl_carousel/amstONikNqM.jpg"> </div>-->
+<!--                    <div class="narrowPic"> <img src="../static/img/HardPh/owl_carousel/ddMhlLtGJrI.jpg"> </div>-->
+<!--                    <div class="narrowPic" id="first">   <img src="../static/img/HardPh/owl_carousel/DEkcJq0lt_o.jpg"> </div>-->
+<!--                    <div class="widePic"> <img src="../static/img/HardPh/owl_carousel/Dr2BRqllcL4.jpg"> </div>-->
+<!--                    <div class="narrowPic"> <img src="../static/img/HardPh/owl_carousel/e-hNBBkxaI4.jpg"> </div>-->
+<!--                    <div class="narrowPic">   <img src="../static/img/HardPh/owl_carousel/K-FswQWi5hQ.jpg"> </div>-->
+<!--                    <div class="widePic">   <img src="../static/img/HardPh/owl_carousel/l5bcOqJFQwM.jpg"> </div>-->
+<!--                    <div class="narrowPic">   <img src="../static/img/HardPh/owl_carousel/pjqnTezIhLw.jpg"> </div>-->
+<!--                    <div class="narrowPic">   <img src="../static/img/HardPh/owl_carousel/Wg85Diy9esI.jpg"> </div>-->
+<!--                </div>-->
 
-            <div id='aboutMeContainer' class="fadeElem">
+            <div id='aboutMeContainer' class="fadeElem opener">
                 <div id='aboutMe'>
                     <div id="aboutMeText">
                         <h2>Привет, я Анфиса</h2>
@@ -177,7 +181,7 @@
             </div>
         </div>
         <div id="pixelPerfect">Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-
+        {% endblock %}
         <footer class="fadeElem" id="footerYakor">
             <div class="footerLinks">
                 <a href="https://vk.com/hardphotography" target="_blank"><img alt="VK" src="../static/img/vk-social-logotype.png"></a>
@@ -193,10 +197,13 @@
         </footer>
 
         <script src='../static/js/navBar.js'></script>
+
         <script src='../static/js/fade.js'></script>
+        <script src='../static/js/feedBack.js'></script>
+        <script src="../../static/js/form_hider.js"></script>
+
+        
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="../static/js/owl.carousel.min.js"></script>
-        <script src="../static/js/carousel.js"></script>
         <script src="https://kit.fontawesome.com/8a86e04b4d.js" crossorigin="anonymous"></script>
     </body>
 </html>

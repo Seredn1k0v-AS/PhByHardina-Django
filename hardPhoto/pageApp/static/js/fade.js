@@ -83,36 +83,36 @@ if (a == 1) {
     
     
     //Код для появления и скрытия выпадающего меню2
-    document.getElementById('info').addEventListener('mouseover', () => {
-        let b = document.getElementById('dropDownContent_2');
-        b.style.visibility = 'visible'
-        b.style.opacity = '1'
-        b.style.marginTop = '0'
-        b.style.transition = '500ms'
-    })
+    // document.getElementById('info').addEventListener('mouseover', () => {
+    //     let b = document.getElementById('dropDownContent_2');
+    //     b.style.visibility = 'visible'
+    //     b.style.opacity = '1'
+    //     b.style.marginTop = '0'
+    //     b.style.transition = '500ms'
+    // })
     
-    document.getElementById('info').addEventListener('mouseout', () => {
-        let b = document.getElementById('dropDownContent_2');
-        b.style.visibility = 'hidden'
-        b.style.opacity = '0'
-        b.style.marginTop = '20px'
-        b.style.transition = '500ms'
-    });
-    let b = document.getElementById('dropDownContent_2');
+    // document.getElementById('info').addEventListener('mouseout', () => {
+    //     let b = document.getElementById('dropDownContent_2');
+    //     b.style.visibility = 'hidden'
+    //     b.style.opacity = '0'
+    //     b.style.marginTop = '20px'
+    //     b.style.transition = '500ms'
+    // });
+    // let b = document.getElementById('dropDownContent_2');
 
-    b.addEventListener('mouseover', () => {
-        b.style.visibility = 'visible'
-        b.style.opacity = '1'
-        b.style.marginTop = '0'
-        b.style.transition = '500ms'
-    });
+    // b.addEventListener('mouseover', () => {
+    //     b.style.visibility = 'visible'
+    //     b.style.opacity = '1'
+    //     b.style.marginTop = '0'
+    //     b.style.transition = '500ms'
+    // });
 
-    b.addEventListener('mouseout', () => {
-        b.style.visibility = 'hidden'
-        b.style.opacity = '0'
-        b.style.marginTop = '20px'
-        b.style.transition = '500ms'
-    });
+    // b.addEventListener('mouseout', () => {
+    //     b.style.visibility = 'hidden'
+    //     b.style.opacity = '0'
+    //     b.style.marginTop = '20px'
+    //     b.style.transition = '500ms'
+    // });
     /*     for(f of fade){
     var rect = f.getBoundingClientRect();
     console.log(rect.top);
@@ -150,3 +150,31 @@ for(let link of phLinks){
     });
     link.addEventListener('mouseout')
 } */
+
+    let opener = document.getElementById("aboutMeContainer");
+
+    window.addEventListener("load", () => {
+            opener.style.visibility = 'visible'
+            opener.style.opacity = '1'
+            opener.style.paddingTop = '0'
+            opener.style.transition = '1250ms'
+    });
+
+    
+    let opene = document.getElementById("opene");
+
+    window.addEventListener("load", () => {
+        opene.style.visibility = 'visible'
+        opene.style.opacity = '1'
+        opene.style.paddingTop = '0'
+        opene.style.transition = '1250ms'
+    });
+
+    let open_button = document.getElementById("open_button");
+
+    window.addEventListener("load", () => {
+        open_button.style.visibility = 'visible'
+        open_button.style.opacity = '1'
+        open_button.style.paddingTop = '0'
+        open_button.style.transition = '1250ms'
+    });

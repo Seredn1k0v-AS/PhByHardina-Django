@@ -1,0 +1,68 @@
+{% extends 'pageApp/index.html' %}
+
+{% block title %}
+    Отзывы
+{% endblock %}
+    
+{% block underlining %}
+        <style>
+            #menu ul li:nth-child(4) a::before {
+                content: '';
+                bottom: -5px;
+                left: 0;
+                position: absolute;
+                height: 1px;
+                background-color: #000;
+                transform: scaleX(1);
+            }
+        </style>
+{% endblock %}
+
+{% block main_content %}
+    
+   
+    <div class="main_content">
+        <div class="comment_wrapper">
+            <div class="form_opener fadeElem" id="open_button">
+                <button  class="feed_button" id="toggle_button">Оставить отзыв</button>
+            </div>
+            {% for c in comm %}
+                    <div class="comment fadeElem" 
+                    {% if forloop.first %}
+                        id="opene"
+                    {% endif %}>
+                        <!-- <div class="pub_time">{{c.pub_time}}</div> -->
+                        <div class="comment_textWrapper">
+                            <div class="user_name">{{c.user_name}}</div>
+                            <div class="user_text">{{c.user_text}}</div>
+                        </div>
+                        {% if c.user_photo %}
+                            <div class="img_wrapper"><img src="{{c.user_photo.url}}"></div>
+                        {% endif %}
+                    </div>
+                    <hr>
+        
+            {% endfor %}
+        </div>
+        <div id="hide_forms">
+            <img id="form_closer" src="../../static/img/cross-small-svgrepo-com.svg" alt="cross">
+            <form action="" method="POST"enctype="multipart/form-data" class="form_feedback">
+                {% csrf_token %}
+                <div class="form_title">
+                    Ваш отзыв
+                </div>
+                {% for f in form %}
+                    <p>
+                        {{ f }}
+                    </p>
+                {% endfor %}
+                <label for="fileInput" class="custom-file-upload">Выберите фото</label>
+                
+                <p><button type="submit" class="feed_button">Отправить</button></p>
+            </form>
+        </div>
+    
+    </div>
+
+    
+{% endblock %}
